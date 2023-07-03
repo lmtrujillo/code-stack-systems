@@ -1,4 +1,4 @@
-interface User {
+export interface User {
   id: number;
   name: string;
   email: string;
@@ -6,4 +6,7 @@ interface User {
   status: string;
 }
 
-export default User;
+export interface AppBarProps {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
