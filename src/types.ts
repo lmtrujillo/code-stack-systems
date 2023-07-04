@@ -10,3 +10,8 @@ export interface AppBarProps {
   darkMode: boolean;
   toggleDarkMode: () => void;
 }
+
+export interface UserTableProps {
+  users: User[];
+  darkMode: boolean;
+}

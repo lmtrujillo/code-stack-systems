@@ -1,11 +1,6 @@
 import React from 'react';
 import { DataGrid, GridColDef } from '@mui/x-data-grid';
-import { User } from './types';
-
-interface UserTableProps {
-  users: User[];
-  darkMode: boolean;
-}
+import { UserTableProps } from './types';
 
 const UserTable: React.FC<UserTableProps> = ({ users, darkMode }) => {
   const columns: GridColDef[] = [
@@ -27,7 +22,7 @@ const UserTable: React.FC<UserTableProps> = ({ users, darkMode }) => {
       style={{
         height: 'calc(100vh - 64px)',
         width: '100%',
-        backgroundColor: darkMode ? 'black' : 'initial',
+        backgroundColor: darkMode ? '#212121' : 'initial',
       }}
     >
       <DataGrid
@@ -35,7 +30,6 @@ const UserTable: React.FC<UserTableProps> = ({ users, darkMode }) => {
         columns={columns}
         pagination
         autoPageSize
-        checkboxSelection
       />
     </div>
   );

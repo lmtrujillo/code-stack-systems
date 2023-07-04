@@ -5,7 +5,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import AppBarComponent from './AppBar';
 import LoadingSpinner from './LoadingSpinner';
 
-const App: React.FC = () => {
+function App() {
   const [users, setUsers] = useState<User[]>([]);
   const [loading, setLoading] = useState(true);
   const [darkMode, setDarkMode] = useState(false);
@@ -30,7 +30,6 @@ const App: React.FC = () => {
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
-    document.body.classList.toggle('dark-mode');
   };
 
   if (loading) {
